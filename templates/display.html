@@ -2,8 +2,9 @@
 {% block body %}
 
 
-{% for event in events_dict %}
-{{event}}
+{% for event in events_dict["results"] %}
+
+{{event["group"]["name"]}}
 
 {% endfor %}
 				
