@@ -1,0 +1,8 @@
+# do not push the virtual env
+env/
+
+# API keys
+_noCommit_*
+
+# exclude all compiled python files
+*.pyc
