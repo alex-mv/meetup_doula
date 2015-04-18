@@ -2,49 +2,71 @@
 <html>
 <head>
 	<title>
+		Meetup Doula
 	</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <script src="https:////maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>
 <body>
+<nav class="navbar navbar-inverse navbar-static-top">
+	<div class="container-fluid">
+	    
+	    <div class="navbar-header">
+	    	<p class="navbar-text">Meetup Doula: helping you find meetups for learning to code</p>
+	    </div> <!--  closes nav upper left -->
+
+	<!--     <div class="navbar-collapse collapse" >
+	        <ul class="nav navbar-nav navbar-right">
+	            <li><a href="/about">Home/ About</a></li>               
+	            <li><a href="/login">Log In/ Register</a></li>
+	            <li><a href="/logout">Log Out</a></li>
+	        </ul>
+	    </div> <!--  closes nav upper right -->
+
+	</div> <!--  closes nav container fluid -->
+</nav> <!--  closes all nav -->
+
 <div class="container">
-	<div class="row">		
-		<form action="/get_meetups" method="GET">
+
+	<form action="/get_meetups" method="GET">
+
+		<div class="row"> <!-- begin form -->	
 			<div class="form-inline">
 				<div class="form-group">
 				    <label for="zipcode">Zipcode</label><br>
 				    <input type="text" class="form-control col-sm-2 " name="zipcode" id="zipcode" placeholder="Ex. 95401" width="50%">
 		  		</div>
-		</div>
-	</div>
-	<div class="row">
-			<div class="form-inline">
-			    <div class="form-group"><br>
-			            <span class="text-formatting">Events within </span>
-			             <select class="form-control" name="radius" id="selectRadius">
-			              </select> <span class="text-formatting-2"> mile(s) radius of zipcode.</span>
-			    </div>
 			</div>
-	</div>
+		</div> <!-- close row -->
+		<div class="row">
+				<div class="form-inline">
+				    <div class="form-group"><br>
+				            <span class="text-formatting">Events within </span>
+				             <select class="form-control" name="radius" id="selectRadius">
+				              </select> <span class="text-formatting-2"> mile(s) radius of zipcode.</span>
+				    </div>
+				</div>
+		</div> <!-- close row -->
 
 
-	<div class="row">	
-			<div class="form-inline">
-		   	 	<div class="form-group"><br>
-		            <span class="text-formatting">Time Frame</span>
-		            <select class="form-control" name="number" id="selectNumber">
-		            </select> <span class="text-formatting-2"></span>
+		<div class="row">	
+				<div class="form-inline">
+			   	 	<div class="form-group"><br>
+			            <span class="text-formatting">Time Frame</span>
+			            <select class="form-control" name="number" id="selectNumber">
+			            </select> <span class="text-formatting-2"></span>
 
-		            <select class="form-control" name="timeframe" id="selectTime">
-		            </select> <span class="text-formatting-2"></span>
-		  		</div>
-		  		<br>
-			        <button type="submit" class="btn btn-default teal">Submit</button>
-			</div>
+			            <select class="form-control" name="timeframe" id="selectTime">
+			            </select> <span class="text-formatting-2"></span>
+			  		</div>
+			  		<br>
+				        <button type="submit" class="btn btn-default teal">Submit</button>
+				</div>
+		</div> <!-- close row -->
+
 	</form>
-	</div>
-</div>
+</div> <!-- close container -->
 
 <script>
   var select = document.getElementById("selectRadius"); 
