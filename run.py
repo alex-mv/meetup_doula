@@ -4,6 +4,10 @@ import os
 app = Flask(__name__)
 app.secret_key = os.environ['FLASK_SECRET_KEY']
 
+@app.route("/")
+def display_form():
+	return render_template("index.html")
+
 
 
 if __name__ == "__main__":
