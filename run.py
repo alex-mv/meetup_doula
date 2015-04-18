@@ -26,8 +26,11 @@ def get_form_info():
 	# print num_of_day_week_month
 	# print days_week_month
 
-	meetup_dict = meetupapi.search_meetups('94901', '15.0')
-	print meetup_dict
+	# test api call with hard coded values
+	# meetup_dict = meetupapi.search_meetups('94901', '15.0')
+
+	meetup_dict = meetupapi.search_meetups(zipcode, radius)
+	# print meetup_dict
 	return render_template("display.html", events_dict = meetup_dict)
 
 if __name__ == "__main__":
