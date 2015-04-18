@@ -11,9 +11,18 @@ def display_form():
 @app.route("/get_meetups")
 def get_form_info():
 	zipcode = request.args.get("zipcode")
-	radius = ""
+	radius = request.args.get("radius")
+	#returns the number of days, weeks, months
+	num_of_day_week_month = request.args.get("number")
+	#returns a string "day(s)" "month(s)" "year(s)"
+	days_week_month = request.args.get("timeframe")
 
-	return render_template("index.html")
+	print zipcode
+	print radius
+	print num_of_day_week_month
+	print days_week_month
+
+	return "hi"
 
 
 
