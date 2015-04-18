@@ -3,6 +3,7 @@ env/
 
 # API keys
 _noCommit_*
+secrets.sh
 
 # exclude all compiled python files
 *.pyc
