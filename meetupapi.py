@@ -14,6 +14,6 @@ def search_meetups(zip, radius):
 	meetup_dict = json.loads(response_obj)					# takes a JSON string & turns it into a Python dict
 	return meetup_dict
 
-test = search_meetups('94901', '15.0')
-test2 = test['results']
-print test2
+# test = search_meetups('94901', '15.0')
+# test2 = test['results']
+# print test2

@@ -1,8 +1,12 @@
 from flask import Flask, render_template, redirect, request, flash, g, session as flask_session
 import os
+import requests
+import json
+import meetupapi
 
 app = Flask(__name__)
 app.secret_key = os.environ['FLASK_SECRET_KEY']
+meetup_api_key = os.environ['MEETUP_API_KEY']
 
 @app.route("/")
 def display_form():
@@ -17,14 +21,14 @@ def get_form_info():
 	#returns a string "day(s)" "month(s)" "year(s)"
 	days_week_month = request.args.get("timeframe")
 
-	print zipcode
-	print radius
-	print num_of_day_week_month
-	print days_week_month
+	# print zipcode
+	# print radius
+	# print num_of_day_week_month
+	# print days_week_month
 
-	return "hi"
-
-
+	meetup_dict = meetupapi.search_meetups('94901', '15.0')
+	print meetup_dict
+	return render_template("display.html", events_dict = meetup_dict)
 
 if __name__ == "__main__":
 	app.run(debug=True)
