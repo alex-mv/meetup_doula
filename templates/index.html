@@ -1,33 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>
-		Meetup Doula
-	</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <script src="https:////maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-</head>
-<body>
-<nav class="navbar navbar-inverse navbar-static-top">
-	<div class="container-fluid">
-	    
-	    <div class="navbar-header">
-	    	<p class="navbar-text">Meetup Doula: helping you find meetups for learning to code</p>
-	    </div> <!--  closes nav upper left -->
-
-	<!--     <div class="navbar-collapse collapse" >
-	        <ul class="nav navbar-nav navbar-right">
-	            <li><a href="/about">Home/ About</a></li>               
-	            <li><a href="/login">Log In/ Register</a></li>
-	            <li><a href="/logout">Log Out</a></li>
-	        </ul>
-	    </div> <!--  closes nav upper right -->
-
-	</div> <!--  closes nav container fluid -->
-</nav> <!--  closes all nav -->
-
-<div class="container">
+{% extends 'base.html' %}
+{% block body %}
 
 	<form action="/get_meetups" method="GET">
 
@@ -111,7 +83,6 @@ console.log("yo")
 
 </script>
 
-</body>
-</html>
+{% endblock %}
 
 
