@@ -31,6 +31,7 @@ def get_form_info():
 
 	meetup_dict = meetupapi.search_meetups(zipcode, radius)
 	# print meetup_dict
+	print meetup_dict
 	return render_template("display.html", events_dict = meetup_dict)
 
 if __name__ == "__main__":
