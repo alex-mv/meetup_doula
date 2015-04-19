@@ -18,7 +18,7 @@ def is_for_beginner(text, word_list):
     for word in word_list:
         if word in text:
             return True
-        return False
+    return False
 
 @app.route("/get_meetups")
 def get_form_info():
